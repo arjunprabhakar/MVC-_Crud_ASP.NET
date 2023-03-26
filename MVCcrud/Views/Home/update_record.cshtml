@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>update_record</title>
+</head>
+<body>
+    <body>
+        <div>
+            @{
+                foreach (System.Data.DataRow dr in ViewBag.emprecord.Rows)
+                {
+
+
+                    <form method="post">
+                        <input type="text" value="@dr["Empname"]" name="Empname" />
+                        <input type="text" value="@dr["Email"]" name="Email" />
+                        <input type="text" value="@dr["Salary"]" name="Salary" />
+                        <input type="submit" value="submit" />
+                    </form>
+                }
+            }
+        </div>
+    </body>
+</body>
+</html>
